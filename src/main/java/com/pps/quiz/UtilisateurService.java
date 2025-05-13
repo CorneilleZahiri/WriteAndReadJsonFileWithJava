@@ -19,9 +19,9 @@ public class UtilisateurService {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
         //Même code (juste adapter) s'il s'agissait d'une liste
-        
-        try (FileWriter filterWriter = new FileWriter("user.json")) {
-            gson.toJson(utilisateur, filterWriter);
+
+        try (FileWriter fileWriter = new FileWriter("user.json")) {
+            gson.toJson(utilisateur, fileWriter);
 
             System.out.println("Fichier Json écrit avec succès");
         } catch (IOException e) {
